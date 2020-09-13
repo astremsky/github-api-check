@@ -13,6 +13,14 @@ function App() {
 
   let increment = () => setCounter(counter+1)
   let decrement = () => setCounter(counter-1)
+  let updateTitle = () => {
+    setState( prev => {
+      return {
+        ...prev,
+      title: 'Updated title'
+      }
+    })
+  }
 
   return (
     <div className="App">
@@ -21,8 +29,9 @@ function App() {
       <div className="buttonGroup">
         <button onClick={increment} className="btn btn-success">+</button>
         <button onClick={decrement} className="btn btn-danger">-</button>
-        <button onClick={decrement} className="btn">Update</button>
+        <button onClick={updateTitle} className="btn">Update</button>
       </div>
+      <h3>{JSON.stringify(state, null, 2)}</h3>
     </div>
   );
 }
