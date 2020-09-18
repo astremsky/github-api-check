@@ -6,8 +6,8 @@ import './App.css';
 function App() {
   
   return ( 
-    <div className="App">
-      <h2></h2>
+    <div className='container pt-5'>
+      <h2>Hello bootstrap testing</h2>
       
     </div>
   );
