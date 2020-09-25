@@ -1,26 +1,28 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
 import {Search} from '../components/Search'
 import {Card} from '../components/Card'
-import { id } from 'postcss-selector-parser';
 
 export const Home = () => {
-  const cards = new Array(12)
+  const cards = new Array(15)
     .fill('')
-    .map((_,i) => i)
-  return(
+    .map((_, i) => i)
+  console.log(cards)
+  return (
     <Fragment>
       <Search />
-      <div className='row'>
-        
+
+      <div className="row">
+
         {cards.map(card => {
-          return(
-            <div className='col-sm-4 mb-4' key={id.card}>
-          <Card />
-        </div>
+          return (
+            <div className="col-sm-4 mb-4" key={card}>
+              <Card />
+            </div>
           )
         })}
 
       </div>
+
     </Fragment>
   )
 }
