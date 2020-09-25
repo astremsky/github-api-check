@@ -1,15 +1,18 @@
 import React,{useState, useEffect} from 'react';
-import './App.css';
+import {Navbar} from './components/Navbar'
+
 
 
 
 function App() {
-  
+
   return ( 
+    <React.Fragment>
+      <Navbar />
     <div className='container pt-5'>
-      <h2>Hello bootstrap testing</h2>
       
     </div>
+    </React.Fragment>
   );
 }
 
